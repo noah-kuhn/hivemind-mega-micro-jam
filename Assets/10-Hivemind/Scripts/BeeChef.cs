@@ -24,7 +24,7 @@ namespace Hivemind{
         void OnTriggerEnter2D(Collider2D col){
             Ingredient ing = col.gameObject.GetComponent<Ingredient>();
             if(ing != null){
-                if(ing.id == sp.ids_needed[sp.next_ing]){
+                if(sp.next_ing < sp.ids_needed.Length && ing.id == sp.ids_needed[sp.next_ing]){
                     Destroy(col.gameObject);
                     sp.NextIng();
                 }

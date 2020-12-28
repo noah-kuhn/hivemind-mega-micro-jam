@@ -31,22 +31,23 @@ namespace Hivemind{
                 //choose a new amount of time to wait between .1 and .3 sec
                 time_to_wait = Random.Range(10,30) / 100.0f;
                 //choose a random ingredient (slightly weighted towards what we need next)
-                int idToSpawn = Random.Range(0,5) == 0 ? (int)(ids_needed[next_ing]) : Random.Range(0,5);
+                int idToSpawn = Random.Range(0,5) == 0 && next_ing < ids_needed.Length ? (int)(ids_needed[next_ing]) : Random.Range(0,5);
                 GameObject objToSpawn = ingredients[idToSpawn];
                 //choose a random track to spawn on
                 Vector2 trackToSpawnOn = track_starts[Random.Range(0,3)];
-                //spawn it
+                //spawn it and play a sound
                 Instantiate(objToSpawn, trackToSpawnOn, Quaternion.identity);
+                MinigameManager.Instance.PlaySound("Pop");
             }
             time_elapsed += Time.deltaTime;
         }
 
         public void NextIng(){
-            //play success noise?
+            MinigameManager.Instance.PlaySound("Ding");
             next_ing++;
             if(next_ing == ids_needed.Length){
-                next_ing = 0;
                 MinigameManager.Instance.minigame.gameWin = true;
+                MinigameManager.Instance.PlaySound("Applause");
             }
 	    }
     }

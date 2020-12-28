@@ -14,5 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameTime: 1
   music: {fileID: 0}
-  sounds: []
+  sounds:
+  - soundName: Applause
+    clip: {fileID: 8300000, guid: 58227bd59681ed44c9b4df6fd7be532b, type: 3}
+    volume: 1
+    minPitch: 1
+    maxPitch: 1
+    source: {fileID: 0}
+  - soundName: Ding
+    clip: {fileID: 8300000, guid: d65683a07709e3a4bbb2dfedd2bb4553, type: 3}
+    volume: 1
+    minPitch: 0.95
+    maxPitch: 1.05
+    source: {fileID: 0}
+  - soundName: Pop
+    clip: {fileID: 8300000, guid: 87a40342b6a68774e8f1f73d09cbe4f6, type: 3}
+    volume: 1
+    minPitch: 0.9
+    maxPitch: 1.1
+    source: {fileID: 0}
   gameWin: 0
