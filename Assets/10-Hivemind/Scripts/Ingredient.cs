@@ -2,17 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ingredient : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
+namespace Hivemind{
+    public class Ingredient : MonoBehaviour
     {
-        
-    }
+        public Ingredient_ID id;
+        public float speed;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        void Update()
+        {
+            //constantly move down until you're off the track
+            Vector2 p = transform.position;
+            p.y -= speed * Time.deltaTime;
+            transform.position = p;
+            if(transform.position.y < -1.0f){
+                Destroy(this);
+            }
+        }
     }
 }
