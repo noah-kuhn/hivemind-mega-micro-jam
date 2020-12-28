@@ -18,6 +18,9 @@ namespace Hivemind{
         public GameObject[] ingredients;
         public Vector2[] track_starts;
 
+        public GameObject bowlProgressIndicator;
+        public Sprite[] bowlSprites;
+
         private float time_elapsed = 0.0f;
         private float time_to_wait = 0.3f;
 
@@ -31,7 +34,9 @@ namespace Hivemind{
                 //choose a new amount of time to wait between .1 and .3 sec
                 time_to_wait = Random.Range(10,30) / 100.0f;
                 //choose a random ingredient (slightly weighted towards what we need next)
-                int idToSpawn = Random.Range(0,5) == 0 && next_ing < ids_needed.Length ? (int)(ids_needed[next_ing]) : Random.Range(0,5);
+                int idToSpawn =
+                    Random.Range(0,4) == 0 && next_ing < ids_needed.Length ?
+                    (int)(ids_needed[next_ing]) : Random.Range(0,5);
                 GameObject objToSpawn = ingredients[idToSpawn];
                 //choose a random track to spawn on
                 Vector2 trackToSpawnOn = track_starts[Random.Range(0,3)];
@@ -44,6 +49,7 @@ namespace Hivemind{
 
         public void NextIng(){
             MinigameManager.Instance.PlaySound("Ding");
+            bowlProgressIndicator.GetComponent<SpriteRenderer>().sprite = bowlSprites[next_ing];
             next_ing++;
             if(next_ing == ids_needed.Length){
                 MinigameManager.Instance.minigame.gameWin = true;

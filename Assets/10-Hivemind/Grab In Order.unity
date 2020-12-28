@@ -906,7 +906,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7470588376015269860, guid: 4152e0ec1cbc7ba459bc0495e85937a1,
         type: 3}
+      propertyPath: bowlProgressIndicator
+      value: 
+      objectReference: {fileID: 384385393}
+    - target: {fileID: 7470588376015269860, guid: 4152e0ec1cbc7ba459bc0495e85937a1,
+        type: 3}
       propertyPath: ids_needed.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7470588376015269860, guid: 4152e0ec1cbc7ba459bc0495e85937a1,
+        type: 3}
+      propertyPath: bowlSprites.Array.size
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7470588376015269860, guid: 4152e0ec1cbc7ba459bc0495e85937a1,
@@ -939,6 +949,36 @@ PrefabInstance:
       propertyPath: ids_needed.Array.data[5]
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 7470588376015269860, guid: 4152e0ec1cbc7ba459bc0495e85937a1,
+        type: 3}
+      propertyPath: bowlSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 1071859512466788795, guid: 8adda3c1c27b38541bc5e792c417f249,
+        type: 3}
+    - target: {fileID: 7470588376015269860, guid: 4152e0ec1cbc7ba459bc0495e85937a1,
+        type: 3}
+      propertyPath: bowlSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 8357997826369999289, guid: 8adda3c1c27b38541bc5e792c417f249,
+        type: 3}
+    - target: {fileID: 7470588376015269860, guid: 4152e0ec1cbc7ba459bc0495e85937a1,
+        type: 3}
+      propertyPath: bowlSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 8096855659599532744, guid: 8adda3c1c27b38541bc5e792c417f249,
+        type: 3}
+    - target: {fileID: 7470588376015269860, guid: 4152e0ec1cbc7ba459bc0495e85937a1,
+        type: 3}
+      propertyPath: bowlSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 1774159735697561378, guid: 8adda3c1c27b38541bc5e792c417f249,
+        type: 3}
+    - target: {fileID: 7470588376015269860, guid: 4152e0ec1cbc7ba459bc0495e85937a1,
+        type: 3}
+      propertyPath: bowlSprites.Array.data[4]
+      value: 
+      objectReference: {fileID: -1371585273021377346, guid: 8adda3c1c27b38541bc5e792c417f249,
+        type: 3}
     - target: {fileID: 7470588376015269860, guid: 4152e0ec1cbc7ba459bc0495e85937a1,
         type: 3}
       propertyPath: ingredients.Array.data[0]
