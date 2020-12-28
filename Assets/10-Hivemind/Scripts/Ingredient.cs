@@ -14,8 +14,8 @@ namespace Hivemind{
             Vector2 p = transform.position;
             p.y -= speed * Time.deltaTime;
             transform.position = p;
-            if(transform.position.y < -1.0f){
-                Destroy(this);
+            if(transform.position.y < -2.5f){
+                Destroy(gameObject);
             }
         }
     }

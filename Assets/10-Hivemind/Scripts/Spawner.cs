@@ -27,12 +27,11 @@ namespace Hivemind{
         // Update is called once per frame
         void Update()
         {
-            if(time_elapsed > 0.2f){
+            if(time_elapsed > 0.3f){
                 time_elapsed = 0.0f;
                 //do some extra randomization later
                 GameObject objToSpawn = ingredients[(int)(ids_needed[next_ing])];
                 Vector2 trackToSpawnOn = track_starts[curr_track];
-                Debug.Log($"Spawning ingredient { objToSpawn } on track { trackToSpawnOn }...");
                 Instantiate(objToSpawn, trackToSpawnOn, Quaternion.identity);
                 curr_track = (curr_track + 1) % 3;
                 curr_ing = (curr_ing + 1) % 5;
@@ -41,10 +40,10 @@ namespace Hivemind{
         }
 
         public void NextIng(){
-            Debug.Log($"NextIng() called: should move onto next ingredient ({ ingredients[(int)(ids_needed[next_ing])] })...");
-            //play success noise
+            //play success noise?
             next_ing++;
             if(next_ing == 6){
+                next_ing = 0;
                 MinigameManager.Instance.minigame.gameWin = true;
             }
 	    }

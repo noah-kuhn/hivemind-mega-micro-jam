@@ -5,21 +5,18 @@ using UnityEngine;
 namespace Hivemind{
     public class BeeChef : MonoBehaviour
     {
-        public int curr_track;
         public Spawner sp;
 
         void Update(){
             //set up controls!
-            if(Input.GetButtonDown("D")){
-                curr_track++;
+            if(Input.GetKeyDown(KeyCode.D)){
                 Vector2 p = transform.position;
-                p.x = Mathf.Clamp(p.x + 10.0f, -10.0f, 10.0f);
+                p.x = Mathf.Clamp(p.x + 2.0f, -2.0f, 2.0f);
                 transform.position = p;
             }
-            if(Input.GetButtonDown("A")){
-                curr_track--;
+            if(Input.GetKeyDown(KeyCode.A)){
                 Vector2 p = transform.position;
-                p.x = Mathf.Clamp(p.x - 10.0f, -10.0f, 10.0f);
+                p.x = Mathf.Clamp(p.x - 2.0f, -2.0f, 2.0f);
                 transform.position = p;
             }
         }
