@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8585660925120552401}
   - component: {fileID: 8585660925120552402}
   - component: {fileID: 8585660925120552403}
-  - component: {fileID: 628787158933348974}
+  - component: {fileID: 6274186793994398408}
   m_Layer: 0
   m_Name: Ingredient Noodles
   m_TagString: Untagged
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   speed: 5
---- !u!61 &628787158933348974
+--- !u!61 &6274186793994398408
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,5 +121,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 2.88, y: 2.12}
   m_EdgeRadius: 0

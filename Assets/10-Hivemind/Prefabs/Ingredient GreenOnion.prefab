@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3789889465098174168}
   - component: {fileID: 611471534717628723}
   - component: {fileID: 8527484595533007651}
-  - component: {fileID: -4036663470433459679}
+  - component: {fileID: 6324214198178184804}
   m_Layer: 0
   m_Name: Ingredient GreenOnion
   m_TagString: Untagged
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 4
   speed: 5
---- !u!61 &-4036663470433459679
+--- !u!61 &6324214198178184804
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,5 +121,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.2}
+  m_Size: {x: 2.52, y: 2.82}
   m_EdgeRadius: 0

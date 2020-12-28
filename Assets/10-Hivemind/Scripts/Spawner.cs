@@ -19,22 +19,24 @@ namespace Hivemind{
         public Vector2[] track_starts;
 
         private float time_elapsed = 0.0f;
-
-        //private dummy variables for now
-        private int curr_track = 0;
-        private int curr_ing = 0;
+        private float time_to_wait = 0.3f;
 
         // Update is called once per frame
         void Update()
         {
-            if(time_elapsed > 0.3f){
+            //if we've waited long enough...
+            if(time_elapsed > time_to_wait){
+                //reset the timer
                 time_elapsed = 0.0f;
-                //do some extra randomization later
-                GameObject objToSpawn = ingredients[(int)(ids_needed[next_ing])];
-                Vector2 trackToSpawnOn = track_starts[curr_track];
+                //choose a new amount of time to wait between .1 and .3 sec
+                time_to_wait = Random.Range(10,30) / 100.0f;
+                //choose a random ingredient (slightly weighted towards what we need next)
+                int idToSpawn = Random.Range(0,5) == 0 ? (int)(ids_needed[next_ing]) : Random.Range(0,5);
+                GameObject objToSpawn = ingredients[idToSpawn];
+                //choose a random track to spawn on
+                Vector2 trackToSpawnOn = track_starts[Random.Range(0,3)];
+                //spawn it
                 Instantiate(objToSpawn, trackToSpawnOn, Quaternion.identity);
-                curr_track = (curr_track + 1) % 3;
-                curr_ing = (curr_ing + 1) % 5;
             }
             time_elapsed += Time.deltaTime;
         }
@@ -42,7 +44,7 @@ namespace Hivemind{
         public void NextIng(){
             //play success noise?
             next_ing++;
-            if(next_ing == 6){
+            if(next_ing == ids_needed.Length){
                 next_ing = 0;
                 MinigameManager.Instance.minigame.gameWin = true;
             }

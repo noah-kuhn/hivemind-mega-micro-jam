@@ -11,12 +11,12 @@ namespace Hivemind{
             //set up controls!
             if(Input.GetKeyDown(KeyCode.D)){
                 Vector2 p = transform.position;
-                p.x = Mathf.Clamp(p.x + 2.0f, -2.0f, 2.0f);
+                p.x = Mathf.Clamp(p.x + 2.0f, -4.09f, -0.09f);
                 transform.position = p;
             }
             if(Input.GetKeyDown(KeyCode.A)){
                 Vector2 p = transform.position;
-                p.x = Mathf.Clamp(p.x - 2.0f, -2.0f, 2.0f);
+                p.x = Mathf.Clamp(p.x - 2.0f, -4.09f, -0.09f);
                 transform.position = p;
             }
         }

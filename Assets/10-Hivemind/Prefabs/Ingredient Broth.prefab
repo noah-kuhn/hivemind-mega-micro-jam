@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7141530256990406657}
   - component: {fileID: 5486339811440814695}
   - component: {fileID: 2835757544131815580}
-  - component: {fileID: 2077796300413351426}
+  - component: {fileID: 5081024573822553526}
   m_Layer: 0
   m_Name: Ingredient Broth
   m_TagString: Untagged
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 3
   speed: 5
---- !u!61 &2077796300413351426
+--- !u!61 &5081024573822553526
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,5 +121,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.2}
+  m_Size: {x: 1.91, y: 2.84}
   m_EdgeRadius: 0

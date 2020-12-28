@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5278209898587025629}
   - component: {fileID: 3780186594549839230}
   - component: {fileID: 5071296048304775402}
-  - component: {fileID: -4182863080062236132}
+  - component: {fileID: 2230168344059077932}
   m_Layer: 0
   m_Name: Ingredient Chicken
   m_TagString: Untagged
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 2
   speed: 5
---- !u!61 &-4182863080062236132
+--- !u!61 &2230168344059077932
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,5 +121,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 2.82, y: 1.91}
   m_EdgeRadius: 0
