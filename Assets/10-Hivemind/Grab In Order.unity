@@ -5660,6 +5660,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7470588376015269860, guid: 4152e0ec1cbc7ba459bc0495e85937a1,
         type: 3}
+      propertyPath: partSys
+      value: 
+      objectReference: {fileID: 348881769}
+    - target: {fileID: 7470588376015269860, guid: 4152e0ec1cbc7ba459bc0495e85937a1,
+        type: 3}
       propertyPath: bowlProgressIndicator
       value: 
       objectReference: {fileID: 384385393}

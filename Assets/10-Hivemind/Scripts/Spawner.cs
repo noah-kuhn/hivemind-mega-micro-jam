@@ -11,6 +11,8 @@ namespace Hivemind{
         GreenOnion
     }
 
+    //it's called Spawner, but really it's more of a manager
+    //I didn't call it manager so as not to confuse it with the MinigameManager
     public class Spawner : MonoBehaviour
     {
         public int next_ing;
@@ -19,10 +21,15 @@ namespace Hivemind{
         public Vector2[] track_starts;
 
         public GameObject bowlProgressIndicator;
+        public ParticleSystem partSys;
         public Sprite[] bowlSprites;
 
         private float time_elapsed = 0.0f;
         private float time_to_wait = 0.3f;
+
+        void Start(){
+            partSys.Stop();
+        }
 
         // Update is called once per frame
         void Update()
@@ -50,11 +57,20 @@ namespace Hivemind{
         public void NextIng(){
             MinigameManager.Instance.PlaySound("Ding");
             bowlProgressIndicator.GetComponent<SpriteRenderer>().sprite = bowlSprites[next_ing];
+            StartCoroutine(PuffSteam());
             next_ing++;
             if(next_ing == ids_needed.Length){
                 MinigameManager.Instance.minigame.gameWin = true;
                 MinigameManager.Instance.PlaySound("Applause");
             }
 	    }
+
+        IEnumerator PuffSteam(){
+            partSys.Play();
+
+            yield return new WaitForSeconds(0.3f);
+
+            partSys.Stop();
+        }
     }
 }
