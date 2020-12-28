@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ramen
   m_EditorClassIdentifier: 
   gameTime: 1
-  music: {fileID: 0}
+  music: {fileID: 8300000, guid: 27735845d9148ae4998c0737c331ab7e, type: 3}
   sounds:
   - soundName: Applause
     clip: {fileID: 8300000, guid: 58227bd59681ed44c9b4df6fd7be532b, type: 3}
@@ -33,4 +33,4 @@ MonoBehaviour:
     minPitch: 0.9
     maxPitch: 1.1
     source: {fileID: 0}
-  gameWin: 0
+  gameWin: 1
